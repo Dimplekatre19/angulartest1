@@ -1,0 +1,25 @@
+
+<header class="bg-primary text-white p-4">
+    <h4>todo with viewchild</h4>
+</header>
+<div class="container mt-4">
+   <div class="row">
+     <div class="col-md-6">
+        <div class="form-group">
+           <input #todoItem type="text" class="form-control" >
+        </div>
+        <button 
+        (click)="ontodoadd()"
+        class="btn btn-sm btn-block btn-secondary">Add Todo</button>
+     </div>
+     <div class="col-md-6">
+           <ul class="list-group">
+              <li 
+                 *ngFor="let todo of todoarr"
+                 class="list-group-item">
+                  I love {{todo}}
+              </li>
+           </ul>
+     </div>
+   </div>
+</div>
